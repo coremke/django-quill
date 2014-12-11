@@ -1,0 +1,21 @@
+# EditorConfig: http://EditorConfig.org
+root = true
+
+[*]
+insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+
+[*.html]
+indent_style = tab
+
+[{*.less,*.css}]
+indent_style = tab
+
+[*.js]
+indent_style = space
+
+[*.py]
+indent_style = space

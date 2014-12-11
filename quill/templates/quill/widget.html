@@ -1,0 +1,25 @@
+{% load quill_tags %}
+<div class="quill-wrapper" data-field-id="{{ id }}">
+	{% render_toolbar config %}
+	{% render_editor config %}
+</div>
+
+<!-- Initialize Quill editor -->
+<script>
+(function () {
+	var editorSelector = "[data-quill='{{ "editor_selector"|quill_conf }}']";
+	var toolbarSelector = "[data-quill='{{ "toolbar_selector"|quill_conf }}']";
+	var id = "{{ id }}";
+	var theme = '{{ "theme"|quill_conf }}';
+	var editor = new QuillDjango(id, editorSelector, toolbarSelector, theme);
+
+	var form = document.querySelector('form');
+	form.addEventListener('submit', function (e) {
+		var html = editor.quill.getHTML();
+		var textArea = document.querySelector('#' + id);
+		if(textArea) {
+			textArea.innerHTML = html;
+		}
+	});
+})();
+</script>

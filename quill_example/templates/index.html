@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		{% for d in data %}
+		<h1>Editor</h1>
+		<hr>
+		{{ d.editor|safe }}
+		<h1>Editor 2</h1>
+		<hr>
+		{{ d.editor2|safe }}
+		{% endfor %}
+	</body>
+</html>

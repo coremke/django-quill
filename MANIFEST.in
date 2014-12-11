@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include quill/migrations *
+recursive-include quill/static *
+recursive-include quill/templates *
+recursive-include quill/templatetags *
