@@ -1,5 +1,5 @@
 include LICENSE
-include README.rst
+include README.md
 recursive-include quill/migrations *
 recursive-include quill/static *
 recursive-include quill/templates *
