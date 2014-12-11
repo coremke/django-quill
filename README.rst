@@ -2,7 +2,11 @@
 django-quill
 ============
 
-Easily use [Quill.js](http://quilljs.com/) in your django admin.
+.. image:: https://pypip.in/version/django-quill/badge.svg
+    :target: https://pypi.python.org/pypi/django-quill/
+    :alt: Latest Version
+
+Easily use `Quill.js <http://quilljs.com/>`_ in your django admin.
 
 This project is heavily inspired by `django-ckeditor <https://github.com/django-ckeditor/django-ckeditor>`_.
 
@@ -15,13 +19,13 @@ Quick start
 
 1. Install the package from pypi
 
-.. code:: bash
+::
 
     pip install django-quill
 
 2. Add "quill" to your INSTALLED_APPS setting like this:
 
-.. code:: python
+::
 
     INSTALLED_APPS = (
         ...
@@ -31,7 +35,7 @@ Quick start
 Usage
 -----
 
-.. code:: python
+::
 
     from django.db import models
     from quill.fields import RichTextField
@@ -47,7 +51,7 @@ Customizing
 
 To customize this app, extend ``apps.QuillConfig`` and modify whatever you need. For example, to add a new toolbar:
 
-.. code:: python
+::
 
     from quill.apps import QuillConfig
 
@@ -69,14 +73,14 @@ Development
 Running Tests
 ^^^^^^^^^^^^^
 
-.. code:: bash
+::
 
     $ make test
 
 Building JS
 ^^^^^^^^^^^
 
-.. code:: bash
+::
 
     $ make build
 
