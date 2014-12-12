@@ -1,5 +1,6 @@
 # django-quill
 
+[![Build Status](https://travis-ci.org/gsmke/django-quill.svg?branch=master)](https://travis-ci.org/gsmke/django-quill)
 [![Latest Version](https://pypip.in/version/django-quill/badge.svg)](https://pypi.python.org/pypi/django-quill/)
 
 Easily use [Quill.js](http://quilljs.com/) in your django admin.

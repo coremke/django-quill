@@ -8,6 +8,7 @@ install:
   - "sudo apt-get -y install nodejs"
   - "sudo npm install"
 
+  - "pip install flake8"
   - "pip install ."
 before_script: npm install
 script: make test
