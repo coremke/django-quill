@@ -13,5 +13,4 @@ install:
 before_script:
   - "npm install"
 script:
-  - make test &
-  - sleep 5
+  - "make test"
