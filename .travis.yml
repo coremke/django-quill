@@ -9,6 +9,5 @@ install:
   - "sudo npm install"
 
   - "pip install ."
-  - "pip install -r requirements.txt"
 before_script: npm install
 script: make test
