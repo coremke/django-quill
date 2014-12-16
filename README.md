@@ -15,18 +15,18 @@ Requires django 1.7.
 
 1. Install the package from pypi
 
-```bash
-pip install django-quill
-```
+    ```bash
+    pip install django-quill
+    ```
 
 2. Add "quill" to your INSTALLED_APPS setting like this:
 
-```python
-INSTALLED_APPS = (
-    ...
-    'quill',
-)
-```
+    ```python
+    INSTALLED_APPS = (
+        ...
+        'quill',
+    )
+    ```
 
 ## Usage
 
