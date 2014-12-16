@@ -6,7 +6,7 @@
 1. Create virtualenv
 
 ```bash
-$ mkvirtualenv -p $(which pythone) django-quill
+$ mkvirtualenv -p $(which python3) django-quill
 ```
 
 2. Install django inside the virtualenv
