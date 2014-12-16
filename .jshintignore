@@ -1,1 +1,2 @@
 quill/static/quill/js/build/*.js
+quill/static/quill/js/vendor/*.js

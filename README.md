@@ -40,6 +40,15 @@ class MyModel(models.Model):
     content2 = RichTextField(config='basic')
 ```
 
+If you want to support image uploads, your admin needs to extend from `quill.admin.QuillAdmin`:
+
+```python
+from quill.admin import QuillAdmin
+
+class MyAdmin(QuillAdmin):
+    pass
+```
+
 ### Customizing
 
 To customize this app, extend ``apps.QuillConfig`` and modify whatever you need. For example, to add a new toolbar:
@@ -56,7 +65,7 @@ class MyQuillConfig(QuillConfig):
 
 There are two toolbars that come with this package:
 
-1. Full (default): Provides basic font style and size selection, bold, italics, underline, strikethrough, text color, background color, lists, and links.
+1. Full (default): Provides basic font style and size selection, bold, italics, underline, strikethrough, text color, background color, lists, links, and images.
 2. Basic: Provides bold, italic, underline, lists, and links.
 
 ## Development
@@ -76,7 +85,6 @@ $ make build
 
 # TODO
 
-1. Better documentation on RTD.
+1. Better documentation.
 2. More tests.
-3. Image support.
-4. Better support for using outside of the admin.
+3. Better support for using outside of the admin.

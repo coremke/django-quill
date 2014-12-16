@@ -7,6 +7,10 @@ test:
 	./node_modules/.bin/jshint $(JS_FILES) $(UNIT_TESTS)
 	./node_modules/.bin/browserify -t coverify $(UNIT_TESTS) | ./node_modules/.bin/testling | ./node_modules/.bin/faucet
 
+docs:
+	rm -rf out
+	jsdoc quill/static/quill/js/ README.md
+
 coverage:
 	./node_modules/.bin/browserify -t coverify $(UNIT_TESTS) | ./node_modules/.bin/testling | ./node_modules/.bin/coverify
 
@@ -16,4 +20,7 @@ build:
 	./node_modules/.bin/browserify $(JS_FILES) -o quill/static/quill/js/build/quill-django.js
 	./node_modules/.bin/uglifyjs quill/static/quill/js/build/quill-django.js > quill/static/quill/js/build/quill-django.min.js
 
-.PHONY: build test coverage
+watch:
+	./node_modules/.bin/watchify $(JS_FILES) -o quill/static/quill/js/build/quill-django.min.js
+
+.PHONY: build coverage docs test watch

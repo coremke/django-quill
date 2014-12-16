@@ -1,9 +1,21 @@
+/** @module quill-django */
 'use strict';
+
+require('./image');
 
 var Quill = require('quill');
 var helpers = require('./helpers');
 
-function QuillDjango(id, editorSelector, toolbarSelector, theme) {
+/**
+ * Creates a new django-quill WYSIWYG editor.
+ * @constructor
+ * @param {string} id - The ID of the field from the django form.
+ * @param {string} editorSelector - The selector used to get the editor HTML.
+ * @param {string} toolbarSelector - The selector used to get the toolbar HTML.
+ * @param {string} uploadHandler - The URL to the handler for image uploads.
+ * @param {string} [theme=snow] - The theme that should be used.
+ */
+function QuillDjango(id, editorSelector, toolbarSelector, uploadHandler, theme) {
     if(id === undefined) {
         throw new Error('Missing editor ID.');
     }
@@ -29,9 +41,10 @@ function QuillDjango(id, editorSelector, toolbarSelector, theme) {
     this.quill = new Quill(editorSelector, {
         modules: {
             'toolbar': {container: toolbarSelector},
-            'link-tooltip': true
+            'link-tooltip': true,
+            'image': {handler: uploadHandler}
         },
-        theme: theme
+        theme: theme || 'snow'
     });
 }
 

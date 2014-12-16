@@ -37,3 +37,14 @@ test('findClosestElement()', function (t) {
     t.ok(helpers.findClosestElement(deeplyNested, '#test-id').getAttribute('id'), 'test-id', 'expected closest ID to be #test-id');
     t.ok(helpers.findClosestElement(deeplyNested, 'div').getAttribute('id'), 'nested-id', 'expected closest ID to be #nested-id');
 });
+
+test('getCookie()', function (t) {
+    t.plan(5);
+
+    var testCookies = 'test=testing;test2=testing2;test3=testing3';
+    t.equal(helpers.getCookie(testCookies, 'test'), 'testing');
+    t.equal(helpers.getCookie(testCookies + ';test=DUPLICATE', 'test'), 'testing');
+    t.notOk(helpers.getCookie(testCookies, 'testing1234'));
+    t.notOk(helpers.getCookie(testCookies, 'tes'));
+    t.notOk(helpers.getCookie('', 'test'));
+});

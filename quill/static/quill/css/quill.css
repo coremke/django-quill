@@ -12,3 +12,34 @@
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 }
+
+.close {
+	float: right;
+	padding: 0;
+	border: 0;
+	font-size: 18px;
+	background: none;
+	color: #000;
+	line-height: 1;
+	opacity: 0.4;
+}
+
+.close:hover {
+	opacity: 1;
+}
+
+.ql-image-alert {
+	padding: 10px;
+	margin-bottom: 0;
+}
+
+.ql-image-alert-error {
+	background: #e74c3c;
+	color: white;
+}
+
+.ql-image-alert-error .close {
+	position: relative;
+	top: -2px;
+	color: #fff;
+}

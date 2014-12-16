@@ -19,6 +19,7 @@ class QuillEditorWidget(forms.Textarea):
         }
 
         js = (
+            static('quill/js/vendor/SimpleAjaxUploader-1a6f62289d.min.js'),
             static('quill/js/build/quill-django.min.js'),
         )
 
