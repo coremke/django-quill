@@ -70,6 +70,18 @@ There are two toolbars that come with this package:
 
 ## Development
 
+There are several dependencies on npm that are required before building django-quill:
+
+```bash
+$ npm install
+```
+
+### Auto Compile JS
+
+```bash
+$ make watch
+```
+
 ### Running Tests
 
 ```bash
