@@ -10,6 +10,7 @@ class QuillConfig(AppConfig):
     editor_selector = 'editor'
     toolbar_selector = 'toolbar'
     theme = 'snow'
+    allowed_image_extensions = ['jpg', 'jpeg', 'png', 'gif']
 
     full = {
         'editor_template': 'quill/editor.html',
