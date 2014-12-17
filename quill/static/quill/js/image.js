@@ -13,7 +13,6 @@ var _ = require('lodash');
  * @param {object} options - Configufation options.
  */
 function QuillImage(quill, options) {
-    // console.log(options);
     var DEFAULTS = {
         handler: '/',
         allowedExtensions: ['jpg', 'jpeg', 'png', 'gif']
