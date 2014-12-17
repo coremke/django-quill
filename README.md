@@ -61,6 +61,16 @@ class MyQuillConfig(QuillConfig):
     my_toolbar = dict(full, toolbar_template='quill/toolbars/my_toolbar.html')
 ```
 
+To customize the extensions of the images that can be uploaded:
+
+```python
+from quill.apps import QuillConfig
+
+
+class MyQuillConfig(QuillConfig):
+    allowed_image_extensions = ['jpeg', 'gif']
+```
+
 ### Provided Toolbars
 
 There are two toolbars that come with this package:

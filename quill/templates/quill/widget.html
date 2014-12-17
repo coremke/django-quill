@@ -14,15 +14,21 @@
 <!-- Initialize Quill editor -->
 <script>
 (function () {
-	var editorSelector = "[data-quill='{{ "editor_selector"|quill_conf }}']";
-	var toolbarSelector = "[data-quill='{{ "toolbar_selector"|quill_conf }}']";
-	var id = "{{ id }}";
-	var uploadHandler = "{% url 'admin:quill-file-upload' %}";
+    /* global QuillDjango:true */
+    'use strict';
+
+	var editorSelector = '[data-quill="{{ "editor_selector"|quill_conf }}"]';
+	var toolbarSelector = '[data-quill="{{ "toolbar_selector"|quill_conf }}"]';
+	var id = '{{ id }}';
+    var imageModuleOpts = {
+        handler: '{% url "admin:quill-file-upload" %}',
+        allowedExtensions: JSON.parse('{{ "allowed_image_extensions"|quill_conf_json }}')
+    };
 	var theme = '{{ "theme"|quill_conf }}';
-	var editor = new QuillDjango(id, editorSelector, toolbarSelector, uploadHandler, theme);
+	var editor = new QuillDjango(id, editorSelector, toolbarSelector, imageModuleOpts, theme);
 
 	var form = document.querySelector('form');
-	form.addEventListener('submit', function (e) {
+	form.addEventListener('submit', function () {
 		var html = editor.quill.getHTML();
 		var textArea = document.querySelector('#' + id);
 		if(textArea) {

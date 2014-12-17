@@ -1,3 +1,5 @@
+import json
+
 from django import template
 from django.apps import apps
 
@@ -10,6 +12,14 @@ quill_app = apps.get_app_config('quill')
 def quill_conf(name):
     """Get a value from the configuration app."""
     return getattr(quill_app, name)
+quill_conf.is_safe = True
+
+
+@register.filter()
+def quill_conf_json(name):
+    """Get a value from the configuration app as JSON."""
+    return json.dumps(getattr(quill_app, name))
+quill_conf_json.is_safe = True
 
 
 @register.simple_tag(takes_context=True)

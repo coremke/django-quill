@@ -12,10 +12,10 @@ var helpers = require('./helpers');
  * @param {string} id - The ID of the field from the django form.
  * @param {string} editorSelector - The selector used to get the editor HTML.
  * @param {string} toolbarSelector - The selector used to get the toolbar HTML.
- * @param {string} uploadHandler - The URL to the handler for image uploads.
+ * @param {string} imageModuleOpts - Options for the image module
  * @param {string} [theme=snow] - The theme that should be used.
  */
-function QuillDjango(id, editorSelector, toolbarSelector, uploadHandler, theme) {
+function QuillDjango(id, editorSelector, toolbarSelector, imageModuleOpts, theme) {
     if(id === undefined) {
         throw new Error('Missing editor ID.');
     }
@@ -42,7 +42,7 @@ function QuillDjango(id, editorSelector, toolbarSelector, uploadHandler, theme) 
         modules: {
             'toolbar': {container: toolbarSelector},
             'link-tooltip': true,
-            'image': {handler: uploadHandler}
+            'image': imageModuleOpts
         },
         theme: theme || 'snow'
     });
