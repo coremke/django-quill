@@ -20,7 +20,7 @@ setup(
     version=quill.__version__,
     author='Ryan Senkbeil',
     author_email='ryan.senkbeil@gsdesign.com',
-    description='Reusable components for the Django admin.',
+    description='Easily use Quill.js in your django admin.',
     long_description=readme,
     packages=['quill'],
     zip_safe=False,
