@@ -65,6 +65,8 @@ QuillImage.prototype.handleUploadFailed = function () {
  */
 QuillImage.prototype.initListeners = function () {
     var csrfToken = helpers.getCookie(document.cookie, 'csrftoken');
+    var _this = this;
+
     this.uploader = new ss.SimpleUpload({
         button: this.quill.modules.toolbar.container.querySelector('.ql-image'),
         url: this.options.handler,
@@ -87,6 +89,14 @@ QuillImage.prototype.initListeners = function () {
             var alert = helpers.findClosestElement(e.target, '.ql-image-alert');
             alert.parentNode.removeChild(alert);
         }
+    });
+
+    document.querySelector('input[name="quillUploadFile"]').addEventListener('mouseenter', function () {
+        helpers.addClass(_this.button, 'hover');
+    });
+
+    document.querySelector('input[name="quillUploadFile"]').addEventListener('mouseleave', function () {
+        helpers.removeClass(_this.button, 'hover');
     });
 };
 

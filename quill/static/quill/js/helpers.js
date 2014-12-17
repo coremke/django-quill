@@ -46,6 +46,34 @@ function findClosestElement(el, selector) {
     );
 }
 
+/**
+ * Adds a class name to an element.
+ * @param {HTMLElement} el - The element to add the class to.
+ * @param {string} className - The class to add.
+ */
+function addClass(el, className) {
+    if(el.classList) {
+        el.classList.add(className);
+    } else {
+        el.className += ' ' + className;
+    }
+}
+
+/**
+ * Removes a class from and element.
+ * @param  {HTMLElement} el - The element to remove the class from
+ * @param  {string} className - The class to remove
+ */
+function removeClass(el, className) {
+    if(el.classList) {
+        el.classList.remove(className);
+    } else {
+        el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+}
+
+module.exports.addClass = addClass;
 module.exports.findClosestElement = findClosestElement;
 module.exports.getCookie = getCookie;
 module.exports.matches = matches;
+module.exports.removeClass = removeClass;

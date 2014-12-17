@@ -5,7 +5,11 @@ PY_FILES = $(shell find ./quill -name "*.py")
 test:
 	flake8 --ignore=E501 $(PY_FILES)
 	./node_modules/.bin/jshint $(JS_FILES) $(UNIT_TESTS)
+ifeq ($(CI),true)
+	./node_modules/.bin/browserify -t coverify $(UNIT_TESTS) | ./node_modules/.bin/testling
+else
 	./node_modules/.bin/browserify -t coverify $(UNIT_TESTS) | ./node_modules/.bin/testling | ./node_modules/.bin/faucet
+endif
 
 docs:
 	rm -rf out
