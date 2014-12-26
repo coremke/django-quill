@@ -26,5 +26,3 @@ build:
 
 watch:
 	./node_modules/.bin/watchify $(JS_FILES) -o quill/static/quill/js/build/quill-django.min.js
-
-.PHONY: build coverage docs test watch
