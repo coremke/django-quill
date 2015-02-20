@@ -12,7 +12,7 @@
 2. Install django inside the virtualenv
 
     ```bash
-    $ pip install django-quill
+    $ pip install django
     ```
 
 3. Install quill
