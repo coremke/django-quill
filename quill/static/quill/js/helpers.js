@@ -35,7 +35,7 @@ function matches(el, selector) {
 }
 
 /**
- * Finds the closes element that matches the given selector.
+ * Finds the closest element that matches the given selector.
  * @param  {HTMLElement} el - The DOM element to start with.
  * @param  {String} selector - The CSS selector to use when matching.
  * @return {HTMLElement} The nearest DOM element matching the given selector.
