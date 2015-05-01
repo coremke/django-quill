@@ -16,6 +16,10 @@ Boilerplate:
 ### Security
 -->
 
+## v0.0.4 (2015-05-01)
+
+Pushed v0.0.3 to PyPI too early and can't re-upload the version.
+
 ## v0.0.3 (2015-05-01)
 
 Minor quill update and fix styles with django-suit.
