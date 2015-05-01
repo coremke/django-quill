@@ -49,6 +49,11 @@
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASBAMAAACk4JNkAAAAElBMVEUAAAAAZswAZcwAZs0AZs0AZszYB6XUAAAABXRSTlMAeMTFxj7M9NAAAABBSURBVAjXY2DAD1RDQSAYyAqFABALLANmMRnAWMwODIIMUFnGUAEIS1A0NADMYgTqhLBY4SyEKXCTTcGMEAJuAgBa9RKl6Fva+wAAAABJRU5ErkJggg==");
 }
 
+.ql-editor {
+    min-height: 80px;
+    overflow-y: auto;
+}
+
 /* Suit Override */
 .suit-column .form-horizontal .control-group .quill-wrapper,
 .suit-column .form-horizontal .control-group .quill-wrapper {
@@ -56,16 +61,26 @@
     margin-left: -15px;
     margin-right: -15px;
 }
+
 .suit-column .form-horizontal .control-group:first-child .quill-wrapper,
 .suit-column .form-horizontal .control-group:first-of-type .quill-wrapper {
     margin-top: -10px;
 }
+
 .suit-column .form-horizontal .control-group .ql-toolbar,
 .suit-column .form-horizontal .control-group .ql-toolbar {
     border-top: 1px solid #ededed;
     border-bottom: 1px solid #ededed;
 }
+
 .suit-column .form-horizontal .control-group:first-child .ql-toolbar,
 .suit-column .form-horizontal .control-group:first-of-type .ql-toolbar {
     border-top: 0;
+}
+
+.suit-column .ql-editor {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px;
 }
