@@ -5,7 +5,8 @@
 }
 
 .ql-container ul {
-    margin-left: 0 !important;
+    margin-left: 2em !important;
+    padding-left: 0 !important;
 }
 
 .ql-toolbar {

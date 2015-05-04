@@ -1,6 +1,6 @@
 {
   "name": "django-quill",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Easily use Quill.js <http://quilljs.com/> in your django admin.",
   "main": "index.js",
   "private": true,

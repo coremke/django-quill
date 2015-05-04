@@ -16,6 +16,12 @@ Boilerplate:
 ### Security
 -->
 
+## v0.0.5 (2015-05-04)
+
+### Fixed
+
+- Fixed bug with UL styling.
+
 ## v0.0.4 (2015-05-01)
 
 Pushed v0.0.3 to PyPI too early and can't re-upload the version.
