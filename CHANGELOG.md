@@ -16,6 +16,13 @@ Boilerplate:
 ### Security
 -->
 
+## v0.1.0 (2015-10-09)
+
+### Added
+
+- Updated to quilljs v0.20.0
+- Make all created editors globally available (closes #2, thanks @alimony)
+
 ## v0.0.5 (2015-05-04)
 
 ### Fixed
