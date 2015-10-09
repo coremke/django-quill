@@ -71,6 +71,8 @@ class MyQuillConfig(QuillConfig):
     allowed_image_extensions = ['jpeg', 'gif']
 ```
 
+If you need to call other methods or perform additional actions on the quill editors, they will be available in ``window.DjangoQuillEditors``.
+
 ### Provided Toolbars
 
 There are two toolbars that come with this package:

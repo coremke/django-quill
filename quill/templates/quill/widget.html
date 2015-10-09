@@ -26,6 +26,8 @@
     };
 	var theme = '{{ "theme"|quill_conf }}';
 	var editor = new QuillDjango(id, editorSelector, toolbarSelector, imageModuleOpts, theme);
+    window.DjangoQuillEditors = window.DjangoQuillEditors || {};
+    window.DjangoQuillEditors[id] = editor;
 
 	var form = document.querySelector('form');
 	form.addEventListener('submit', function () {
