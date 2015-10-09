@@ -1,17 +1,13 @@
 import os
-import sys
 
+from codecs import open
 from setuptools import setup
-
-if sys.argv[-1] == 'publish':
-    os.system('make build')
-    os.system('python setup.py sdist upload')
-    sys.exit()
 
 import quill
 
-with open('README.md', 'r') as readme_file:
-    readme = readme_file.read()
+here = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
+    long_description = f.read()
 
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
@@ -21,7 +17,7 @@ setup(
     author='Ryan Senkbeil',
     author_email='ryan.senkbeil@gsdesign.com',
     description='Easily use Quill.js in your django admin.',
-    long_description=readme,
+    long_description=long_description,
     packages=['quill'],
     zip_safe=False,
     include_package_data=True,
